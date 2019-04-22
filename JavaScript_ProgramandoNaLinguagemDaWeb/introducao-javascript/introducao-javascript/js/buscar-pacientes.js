@@ -3,7 +3,8 @@ var botaoAdicionar = document.querySelector("#buscar-pacientes");
 botaoAdicionar.addEventListener("click", function () {
 
     var xhr = new XMLHttpRequest();
-
+    
+    //configurando o XMLHttpRequest com o metodo http GET e passando o http da api 
     xhr.open("GET", "http://api-pacientes.herokuapp.com/pacientes");
 
     xhr.addEventListener("load", function () {
