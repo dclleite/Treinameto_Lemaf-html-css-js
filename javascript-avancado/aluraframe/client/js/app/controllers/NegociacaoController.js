@@ -6,6 +6,9 @@ class NegociacaoController {
         this._inputData = document.querySelector('#data');
         this._inputValor = document.querySelector('#valor');
         this._listaNegociacoes = new ListaNegociacoes();
+        this._negociacoesView = new NegociacoesView(document.querySelector('#negociacoesView'));
+        
+        this._negociacoesView.update(this._listaNegociacoes);
 
     }
 
@@ -14,6 +17,7 @@ class NegociacaoController {
         event.preventDefault();
         
         this._listaNegociacoes.adiciona(this._criaNegociacao());
+        this._negociacoesView.update(this._listaNegociacoes);
         this._limpaForm()
 
         console.log(this._listaNegociacoes.getNegociacoes());
@@ -31,8 +35,8 @@ class NegociacaoController {
     
     _limpaForm() {
         this._inputData.value = '';
-        this._inputQuantidade = 1;
-        this._inputValor = 0.0;
+        this._inputQuantidade.value = 1;
+        this._inputValor.value = 0.0;
         
         this._inputData.focus();
     }
