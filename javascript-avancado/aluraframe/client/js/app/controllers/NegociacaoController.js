@@ -1,7 +1,25 @@
 class NegociacaoController{
     
+    constructor(){
+        
+        this._inputQuantidade = document.querySelector('#quantidade'); 
+        this._inputData = document.querySelector('#data'); 
+        this._inputValor = document.querySelector('#valor'); 
+    }
+    
     adiciona(event){
+        
         event.preventDefault();
-        alert('chamei acção no controller');
+           
+        let negociacao = new Negociacao(
+            DateHelper.textoParaData(this._inputData.value),
+            this._inputQuantidade.value,
+            this._inputValor.value  
+        );
+
+        console.log(negociacao);
+        console.log(DateHelper.dataParaTexto(negociacao.data));
+        
+        
     }
 }
