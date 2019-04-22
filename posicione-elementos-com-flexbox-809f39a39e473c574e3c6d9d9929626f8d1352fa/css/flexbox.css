@@ -48,3 +48,26 @@
     width: 23%;
     margin: 1%;
 }
+
+/*parte mobile*/
+.cabecalhoPrincipal-nav {
+    flex-direction: column;
+    
+}
+
+.cabecalhoPrincipal .container{
+    flex-direction: column;
+    align-items: initial;
+    text-align: center;
+}
+
+.conteudoPrincipal-cursos{
+    flex-direction: column;
+}
+.conteudoPrincipal-cursos-link{
+    width: 100%;
+}
+
+.rodapePrincipal-navMap-list{
+    height: auto;    
+}
