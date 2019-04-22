@@ -29,6 +29,7 @@ class NegociacaoController {
 
 
     }
+    
 
     _criaNegociacao() {
 
